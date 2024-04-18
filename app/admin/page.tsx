@@ -45,7 +45,7 @@ const [salesData, userData, productData]  = await Promise.all([
     getProductData(),
 ])
 
-    return <div className="grid grid-cols-1 md: grid-cols-2 lg: grid-cols-3 gap-4">
+    return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
        <DashboardCard title = "Sales" subtitle = {`${formatNumber(salesData.numberOfSales)} Sales`} body = {formatNumber(salesData.amount)}/>
        <DashboardCard title = "Customers" subtitle = {`${formatCurrency(userData.averageValuePerUser)} Average Value`} body = {formatNumber(userData.userCount)}/>
        <DashboardCard title = "Active Products" subtitle = {`${formatNumber(productData.inactive)} Inactive`} body = {`${formatNumber(productData.inactive)} Active`}/>
